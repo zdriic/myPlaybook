@@ -3,7 +3,9 @@
   hosts: all
   become: true
   roles:
-    - { role: nginx-centos, when: ansible_distribution == 'CentOS' }
-    - { role: nginx-ubuntu, when: ansible_distribution == 'Ubuntu' }
-    - { role: install-postgre-source }
-    - { role: install-compiler-centos, when: ansible_distribution == 'CentOS' }
+   # - { role: nginx-centos, when: ansible_distribution == 'CentOS' }
+   # - { role: nginx-ubuntu, when: ansible_distribution == 'Ubuntu' }
+   # - { role: install-postgre-source }
+   # - { role: install-compiler-centos, when: ansible_distribution == 'CentOS' }
+   # - { role: install-compiler-ubuntu, when: ansible_distribution == 'Ubuntu' }
+    - { role: launch-make }
