@@ -1,0 +1,14 @@
+---
+# tasks file for install-compiler-centos
+- name: "install gcc on centos"
+  become: true
+  yum:
+    name: "{{ packages }}"
+    skip_broken: yes
+  vars:
+    packages:
+      - "@Development Tools"
+      - readline-devel
+      - python-devel
+      - libselinux-devel
+      - openssl-devel
