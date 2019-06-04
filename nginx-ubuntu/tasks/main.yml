@@ -1,0 +1,11 @@
+---
+# tasks file for nginx-ubuntu
+- name: "Installation de nginx sur ubuntu"
+  apt:
+    name: nginx
+    state: latest
+- name: "Start nginx"
+  service:
+    name: nginx
+    state: started
+

@@ -1,0 +1,7 @@
+---
+- name: "Installer nginx via un role"
+  hosts: all
+  become: true
+  roles:
+    - { role: nginx-centos, when: ansible_distribution == 'CentOS' }
+    - { role: nginx-ubuntu, when: ansible_distribution == 'Ubuntu'}
